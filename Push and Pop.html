@@ -1,0 +1,44 @@
+Kris Kyle C. Quinco	1-BSCS
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Push and Pop.hmtl </title>
+
+		<script>
+			function pal() {
+				var y = document.getElementById("x").value;
+				var x = y.toLocaleLowerCase().replace(/[\W_]/g, '')
+
+				var splitx = x.split("");
+				var reversex = splitx.reverse();
+				var joinx = splitx.join("");
+				var finalx = joinx.replace (",", "");
+				document.getElementById("blank2").innerHTML = "reversed string = " +finalx;
+
+				if(x == finalx) {
+					document.getElementById("blank3").innerHTML = "Palindrome!";
+				}
+				else {
+					document.getElementById("blank3").innerHTML = "Not a palindrome!";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<p> This program will identify if a string is a palindrome or not </p>
+
+
+		Input string <input type="text" id="x">
+		<button onclick="pal()"> Submit </button>
+
+		<p id="blank1"> </p>
+		<p id="blank2"> </p>
+		<b>
+		<p id="blank3"> </p>
+		</b>
+	</body>
+</html>
+
